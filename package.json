@@ -1,7 +1,7 @@
 {
   "name": "commander.js-error",
-  "version": "1.0.0",
-  "description": "A tiny module for formatting output to match commander.js default errors",
+  "version": "1.0.2",
+  "description": "A tiny module for formatting error output to match commander.js default errors",
   "keywords": [
     "commander",
     "commander.js",

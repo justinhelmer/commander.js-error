@@ -1,11 +1,13 @@
 # commander.js-error
-A tiny module for formatting error output to match [commander.js](https://github.com/tj/commander.js) default errors.
+A tiny module for formatting error output to match commander.js default errors.
 
 [![npm package](https://badge.fury.io/js/commander.js-error.svg)](https://www.npmjs.com/package/commander.js-error)
 [![node version](https://img.shields.io/node/v/commander.js-error.svg?style=flat)](http://nodejs.org/download/)
 [![dependency status](https://david-dm.org/justinhelmer/commander.js-error.svg)](https://github.com/justinhelmer/commander.js-error)
 [![devDependency status](https://david-dm.org/justinhelmer/commander.js-error/dev-status.svg)](https://github.com/justinhelmer/commander.js-error#info=devDependencies)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/justinhelmer/commander.js-error/issues)
+
+Intended to be used in conjunction with [commander.js](https://github.com/tj/commander.js).
 
 Does just what it says; nothing more, nothing less.
 
@@ -51,7 +53,7 @@ const foo = 'bar';
 error('unknown [foo]:', 'foo must be of type', foo);
 ```
 
-### Options
+## Options
 
 `commander.js-error` accepts options, but they **must** be at the _first_ position in the arguments list, i.e.:
 
@@ -70,6 +72,11 @@ error(message1, ..., options);             // WILL NOT work
     - `[0...255]` - exit with a status of `exit`
 - `verbose` _{boolean}_ - Log the `exit status` when the process ends. Only applies in conjunction with the `exit` option;
   is otherwise ignored. Defaults to `false`.
+
+## Contributing
+
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/justinhelmer/commander.js-error/issues)
+[![devDependency status](https://david-dm.org/justinhelmer/commander.js-error/dev-status.svg)](https://github.com/justinhelmer/commander.js-error#info=devDependencies)
 
 ## License
 
