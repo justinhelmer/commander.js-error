@@ -1,0 +1,28 @@
+{
+  "name": "commander.js-error",
+  "version": "1.0.0",
+  "description": "A tiny module for formatting output to match commander.js default errors",
+  "keywords": [
+    "commander",
+    "commander.js",
+    "errors",
+    "formatting",
+    "pad",
+    "cli"
+  ],
+  "homepage": "https://github.com/justinhelmer/commander.js-error",
+  "bugs": {
+    "url": "https://github.com/justinhelmer/commander.js-error/issues",
+    "email": "jhelmer25@gmail.com"
+  },
+  "license": "MIT",
+  "author": "Justin Helmer jhelmer25@gmail.com",
+  "main": "./index.js",
+  "repository": "justinhelmer/commander.js-error",
+  "dependencies": {
+    "lodash": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=0.12"
+  }
+}
