@@ -41,19 +41,17 @@ $ npm install --save commander.js-error
 
 ```js
 const error = require('commander.js-error');
-
-error('unknown [foo]: foo must be of type bar');
+error(new Error('unknown [foo]: foo must be of type bar'));
 ```
 
 Follows the same syntax as [console.error](https://nodejs.org/api/console.html#console_console_error_data):
 
 ```js
 const foo = 'bar';
-
 error('unknown [foo]:', 'foo must be of type', foo);
 ```
 
-### Options
+## Options
 
 `commander.js-error` accepts options, but they **must** be at the _first_ position in the arguments list, i.e.:
 
@@ -61,7 +59,10 @@ error('unknown [foo]:', 'foo must be of type', foo);
 const error = require('commander.js-error');
 
 error(options, message1, ...);             // WILL work
+error(options, new Error('oops!'));        // WILL work
+
 error(message1, ..., options);             // WILL NOT work
+error(new Error('oops!'), options);        // WILL NOT work
 ```
 
 `options` should be an object and can contain any of the following:
@@ -70,8 +71,12 @@ error(message1, ..., options);             // WILL NOT work
     - `false` - do not exit
     - `true` - exit with a status of `1` (default)
     - `[0...255]` - exit with a status of `exit`
-- `verbose` _{boolean}_ - Log the `exit status` when the process ends. Only applies in conjunction with the `exit` option;
-  is otherwise ignored. Defaults to `false`.
+- `verbose` _{boolean}_ - Log the full `stack trace` (if an `Error` object is supplied) and `exit status`.
+
+## Contributing
+
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/justinhelmer/commander.js-error/issues)
+[![devDependency status](https://david-dm.org/justinhelmer/commander.js-error/dev-status.svg)](https://github.com/justinhelmer/commander.js-error#info=devDependencies)
 
 ## License
 
